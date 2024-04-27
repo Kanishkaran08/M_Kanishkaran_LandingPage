@@ -1,0 +1,377 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Default font for the whole page */
+    background: linear-gradient(120deg, #333 0%, #000 100%); /* Dark gradient from dark gray to black */
+}
+
+
+nav {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent black background for better readability */
+    backdrop-filter: blur(5px); /* Soften the background with a blur effect */
+}
+
+.special-collections {
+    z-index: 3;
+    color: white;
+    text-align: center;
+    font-size: 4vw;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Increase spacing between letters */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Text shadow for depth */
+}
+
+.collections-description {
+    z-index: 3;
+    color: white;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: 400;
+    margin-top: 15px;
+    opacity: 0.9; /* Slightly transparent for a softer look */
+    transition: opacity 0.3s ease; /* Smooth transition for hover */
+}
+
+.collections-description:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+.shop-now-button {
+    display: inline-block;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%); /* Vibrant gradient background */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    z-index: 3;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    text-transform: uppercase;
+    border: none;
+}
+
+.shop-now-button:hover, .shop-now-button:focus {
+    transform: translate(0, -5px); /* Lift button slightly on hover/focus */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.shop-now-button:active {
+    transform: translate(0, 2px); /* Push button down on click */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .special-collections {
+        font-size: 6vw;
+    }
+
+    .collections-description {
+        font-size: 2.5vw;
+    }
+
+    .shop-now-button {
+        font-size: 3.5vw;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .special-collections {
+        font-size: 8vw;
+    }
+
+    .collections-description {
+        font-size: 3.5vw;
+    }
+
+    .shop-now-button {
+        font-size: 4vw;
+    }
+}
+
+video#navbarVideo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.logo-container {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    z-index: 3;
+}
+
+img#navLogo {
+    height: 80px;
+    transition: transform 0.3s ease; /* Smooth logo scaling on hover */
+}
+
+img#navLogo:hover {
+    transform: scale(1.1); /* Enlarge logo on hover */
+}
+
+.nike-color {
+    color: #FF5E00; /* This sets the color of 'Nike' to orange */
+}
+
+
+
+
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line as needed */
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    margin-top: 60px; /* Adjusted or removed in media queries if necessary */
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.text-content {
+    flex: 1 1 50%; /* Flexibility in sizing, takes up to 50% */
+    word-wrap: break-word; /* Ensures text breaks to avoid overflow */
+    align-self: center; /* Centers this item vertically within its container */
+    font-family: 'Inter', sans-serif; /* Sets the Inter font, with a sans-serif fallback */
+    color: #fff;
+}
+
+.image-container {
+    flex: 1 1 50%; /* Flexibility in sizing, takes up to 50% */
+    display: flex;
+    justify-content: center; /* Center the image within the container */
+    align-items: center; /* Align vertically */
+
+}
+
+.image-container img {
+    width: 400px; /* Sets the width of the image */
+    height: 600px; /* Sets the height of the image */
+    box-shadow: 0 0 40px 0 white; /* Applies a shadow around the image */
+    border-radius: 10px;
+}
+
+
+.topic2 {
+    text-align: center; /* Centers this item vertically within its container */
+    margin-top: 100px;
+    font-size: 40px;
+    color: #fff;
+}
+
+
+
+
+/* Styling for the Swiper container */
+.mySwiper {
+    margin-top: 50px; /* Adjust top margin as needed */
+    width: calc(100% - 200px); /* Reduce width to allow more padding */
+    height: 600px; /* Set a fixed height */
+    padding: 0 100px; /* 100px padding on each side */
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin-left: auto; /* Center the swiper container horizontally */
+    margin-right: auto; /* Center the swiper container horizontally */
+}
+
+/* Styling for each slide within the Swiper */
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px; /* Width of each slide */
+    height: 400px; /* Height of each slide */
+    margin-left: -150px; /* Overlap slides */
+}
+
+/* Styling for images within each slide */
+.swiper-slide img {
+    display: block;
+    width: 100%; /* Make images fill the slide */
+    height: 100%;
+    box-shadow: 0px 0px 30px 0px white;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .mySwiper {
+        width: calc(100% - 100px); /* Slightly less padding on smaller screens */
+        padding: 0 50px;
+        height: 450px; /* Smaller fixed height */
+    }
+    .swiper-slide {
+        width: 250px; /* Smaller slides */
+        height: 300px; /* Smaller slides */
+        margin-left: -125px; /* Adjust overlap */
+    }
+}
+
+@media (max-width: 768px) {
+    .mySwiper {
+        width: calc(100% - 40px); /* Less padding for very small screens */
+        padding: 0 20px;
+        height: 300px; /* Smaller height for mobile devices */
+    }
+    .swiper-slide {
+        width: 200px; /* Even smaller slides for mobile */
+        height: 250px; /* Adjust height for mobile */
+        margin-left: -100px; /* Adjust overlap for smaller width */
+    }
+}
+
+@media (max-width: 480px) {
+    .mySwiper {
+        padding: 0 10px; /* Minimal padding on very small screens */
+        height: 250px; /* Suitable for very small devices */
+    }
+    .swiper-slide {
+        width: 150px; /* Suitable width for very small devices */
+        height: 200px; /* Suitable height for very small devices */
+        margin-left: -75px; /* Adjust overlap accordingly */
+    }
+
+    .swiper-slide img {
+        box-shadow: 0px 0px 10px 0px black;
+    }
+
+
+}
+
+
+
+.about-nike {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Increase spacing between letters */
+}
+  
+  .nike-description {
+    text-align: center; /* Justify align the paragraph */
+    margin: 20px auto; /* Vertical spacing and horizontally center */
+    max-width: 800px; /* Maximum width of the text block */
+    margin-top: 60px;
+    color: #fff;
+  }
+  
+
+  .nike-logo {
+    display: block;
+    margin: 20px auto;  /* Additional spacing above and below the logo */
+    width: 100px;  /* Adjust based on the actual size of your logo */
+    height: auto;
+    margin-top: 40px;
+}
+
+
+  footer {
+    background: black; /* Set background to black */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Shadow effect on top edge */
+    margin-top: 100px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 100px;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Logo enlarges on hover */
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease, rotate 0.6s ease-in-out;
+}
+
+.social-icons a img {
+    width: 30px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(360deg) brightness(100%) contrast(100%);
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2) rotate(360deg); /* Rotate and enlarge icon on hover */
+    /* Maintain the white color filter */
+}
+
+
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        align-items: center; /* Center align the items when stacked */
+        margin-top: 20px;
+        margin-left: 0; /* Remove side margin */
+    }
+
+    .text-content, .image-container {
+        flex: 1 1 100%; /* Each takes full width on smaller screens */
+        padding: 10px 0; /* Adjust padding */
+        margin-top: 20px; /* Adjust the top margin for better visual alignment */
+    }
+
+    .image-container img {
+        max-height: 400px; /* Adjust height for smaller screens */
+    }
+}
